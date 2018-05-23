@@ -1,0 +1,171 @@
+
+\documentclass[]{article}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+
+
+\usepackage{array, xcolor}
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
+\newcolumntype{R}{p{0.8\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+
+\usepackage{inputenc}
+\usepackage[hmargin=2cm,vmargin=3cm]{geometry} %set horizontal and vertical margins
+\usepackage{setspace} %to change space between lines
+\singlespace
+% Math extension from the American Mathematical Society
+\usepackage{amssymb} % high quality math symbols
+\usepackage{amsmath} % high quality math formulas
+\usepackage{booktabs} % publication quality tables
+\usepackage{graphicx} % importation of graphics files
+\usepackage{dcolumn}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+%Redefining sections as problems
+\makeatletter
+\newenvironment{problem}{\@startsection
+	{section}
+	{1}
+	{-.2em}
+	{-3.5ex plus -1ex minus -.2ex}
+	{2.3ex plus .2ex}
+	{\pagebreak[3]%forces pagebreak when space is small; use \eject for better results
+		\large\bf\noindent{Problem }
+	}
+}
+{%\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+	\begin{center}\large\bf \ldots\ldots\ldots\end{center}}
+\makeatother
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\renewcommand{\labelenumii}{\roman{enumii}}
+
+
+
+	
+	
+
+	\title{Introduction to Data Science: Part 1\\Universidad del Rosario}
+		
+	\author{Instructor: Kevin Munger\\km2713@nyu.edu\\ Department of Politics\\New York University\\June, 2018}
+	\date{}
+	\begin{document}
+	
+
+	\maketitle
+
+
+	
+	
+	{\bf{Course Description}}: In this course (the first half of a course co-taught with Profesor Jorge Gallego), we will cover the basics of data science. This course is aimed at students with an interest in applying recent developments in data science to any number of possible endeavors, including academic research, government work, the non-profit world or the corporate sector. That said, I am coming from an academic background, and the course will be presented with a rigor commensurate with academic research. This portion of the course will begin with a theoretical overview of the scope of data science and the basic understanding necessary to make valid inferences using the increasingly powerful methods that constitute it. We will then delve into areas of data science with which I have the most experience working: textual analysis, unsupervised models, and social media.\\
+	
+
+	
+	{\bf{Methods}}: The course is both theoretical and practical. We will discuss high-level concepts as well as specific data manipulation and statistical techniques; the latter will entail both formal mathematical explanations and implementation in the statistical language R. That said, this course is an overview, and we will not focus too much on deriving each formula or writing programs from scratch. Rather, the goal is that students will be able to employ basic data science methods correctly and productively by the end of the course. All of the course materials can be found on my github:
+		\href{https://github.com/kmunger/Intro\_Data\_Science\_Rosario}{https://github.com/kmunger/Intro\_Data\_Science\_Rosario}\\
+		
+{\bf{Before the course}}: In order to take the best advantage of our time together, I encourage all students to have the latest versions of R and R studio installed. I also request that students purchase and read what I consider to be the best introduction to the topic currently on the market: \href{https://www.bitbybitbook.com/}{Bit by Bit, by Matt Salganik}. \\
+		
+	
+	{\bf{Evaluation}}:
+	Final grades for the course will be a simple average of the score on the final exam (one for each section of the course) and a project proposal (one for the overall course).\\
+	\begin{itemize}
+		\item Final Exam: 50\% 
+		\item Project Proposal: 50\% 
+	
+	\end{itemize}
+	
+	\section*{Weekly Schedule}
+	Note that the specific daily schedule may vary based on our progress through the course material.
+	
+	\section*{\textnormal{1: Introduction to Data Science}}
+	
+	
+		\section*{\textnormal{2: Introduction to R}}
+	
+	
+	\section*{\textnormal{2: Introduction to Using Text as Data }}
+
+	\begin{itemize}
+		\item \cite{campbell1966stokes} Chapters 6-7
+		\item \cite{converse1969time}
+		\item \cite{franklin1983dynamics}
+		\item \cite{gerber1998rational}
+		\item \cite{green2002partisan} Chapters 2, 8
+
+	\end{itemize}
+	
+	\section*{\textnormal{3: Introduction to Unsupervised Models}}
+
+	
+	
+	
+	\begin{itemize}
+		\item \cite{carpini1993measuring} 
+		\item \cite{carpini1991stability}
+
+		\item \cite{jerit2012partisan}
+		\item \cite{taber2006motivated} 
+		\item \cite{lodge2013rationalizing} Chapter 2
+		
+	\end{itemize}
+
+
+ 	\section*{\textnormal{3: Text as Data Applications}}
+	
+	
+	
+	\begin{itemize}
+		\item \cite{zaller1992nature} Chapters 1-6, 10-11
+		\item \cite{stimson2015tides} Chapter 1
+		\item \cite{bullock2011elite} 
+		
+		\item \cite{shapiro2011public}
+		\item \cite{cranmer2012heritability} 
+		
+		
+	\end{itemize}
+
+	\section*{\textnormal{5: Social Media Data}}
+
+	
+	
+	
+	\begin{itemize}
+		\item \cite{bartels1988presidential} Chapters 1-5
+		\item \cite{cohen2009party} Chapters 7-9
+		
+		\item \cite{holbrook1999political}
+		\item \cite{geer2008defense} Chapter 3
+
+		
+	\end{itemize}
+
+
+	\section*{\textnormal{Week 6: Turnout}}
+
+	
+	
+	
+	\begin{itemize}
+		\item \cite{lijphart1997unequal} 
+		\item \cite{aldrich1993rational} 
+		 \item \cite{powell1986american} 
+		\item \cite{leighley2013votes} Chapters 2, 5 and 6
+		\item \cite{gentzkow2006television} 
+		
+		
+	\end{itemize}
+
+
+
+				\bibliography{bib}{}
+				\bibliographystyle{apsr2}
+	
+	
+	
+	
+	
+\end{document}
