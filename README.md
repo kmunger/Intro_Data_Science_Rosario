@@ -26,7 +26,7 @@ This repository contains the materials for the first part of the Introduction to
 
 [Naive Bayes (Slides)](/NaiveBayes/NaiveBayes.pdf)
 
-[Introduction to Using Text as Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data.html)
+[Introduction to Using Text as Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_1.html)
 
 [votos84.csv (Base de Datos)](/NaiveBayes/votos84.csv)
 
