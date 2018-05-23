@@ -3,7 +3,7 @@ This repository contains the materials for the first part of the Introduction to
 
 ### Instructor: Kevin Munger
 
-## 1. Overview
+## 1. Introduction to Data Science
 
 [Syllabus](/syllabus.pdf)
 
@@ -11,7 +11,7 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 2. Introduction to the Use of Text as Data
+## 2. Introduction to R
 
 [Vecinos más Cercanos kNN (Slides)](/kNN/kNN.pdf)
 
@@ -22,7 +22,7 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 3. Naive Bayes
+## 3. Introduction to Using Text as Data
 
 [Naive Bayes (Slides)](/NaiveBayes/NaiveBayes.pdf)
 
@@ -32,7 +32,7 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 4. Support Vector Machine
+## 4. Introduction to Unsupervised Models
 
 [Support Vector Machine (Slides)](/SVM/SVM.pdf)
 
@@ -43,7 +43,7 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 5. Árboles de Decisión
+## 5. More Unsupervised Models
 
 [Árboles de Decisión (Slides)](/DecisionTrees/DecisionTrees.pdf)
 
@@ -55,7 +55,7 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 6. Random Forests
+## 6. Text as Data Applications
 
 [Random Forest (Slides)](/RandomForests/Random_Forests.pdf)
 
@@ -66,7 +66,7 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 7. Métodos de Predicción: Regresión
+## 7. Social Media Data
 
 [Regresión Lineal y Logit (Slides)](/Regresion/Regresion.pdf)
 
@@ -75,25 +75,6 @@ This repository contains the materials for the first part of the Introduction to
 [insurance.csv (Base de Datos)](Regresion/insurance.csv)
 
 
-
-
-## 8. RIDGE y LASSO
-
-[Regresiones RIDGE y LASSO (Slides)](/LASSO/LASSO.pdf)
-
-[Regresiones RIDGE y LASSO en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/LASSO/LassoR.html)
-
-[Hitters.csv](/LASSO/Hitters.csv)
-
-
-
-## 9. Desempeño de Modelos
-
-[Desempeño de Modelos (Slides)](/Performance/Performance.pdf)
-
-[Desempeño de Modelos en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/Performance/desempeno.html)
-
-[bank.csv](/Performance/bank.csv)
 
 
 ## Examen Parcial
