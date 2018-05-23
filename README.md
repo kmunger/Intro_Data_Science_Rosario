@@ -5,7 +5,7 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 1. Overview
 
-[Syllabus](/Intro/syllabus.pdf)
+[Syllabus](/syllabus.pdf)
 
 [Introducción (slides)](/Intro/Intro.pdf)
 
