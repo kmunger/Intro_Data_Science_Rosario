@@ -17,18 +17,25 @@ This repository contains the materials for the first part of the Introduction to
 
 [Vecinos más Cercanos kNN en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/kNN/kNNR.nb.html)
 
-[wisc_bc_data.csv (Base de Datos)](/kNN/wisc_bc_data.csv)
 
 
 
 
 ## 3. Introduction to Using Text as Data
 
-[Naive Bayes (Slides)](/NaiveBayes/NaiveBayes.pdf)
+[Introduction to Using Text as Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/intro_text_as_data.html)
 
-[Introduction to Using Text as Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_1.html)
+[Text as Data 1 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_1.html)
 
-[votos84.csv (Base de Datos)](/NaiveBayes/votos84.csv)
+[Text as Data 2 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_2.html)
+
+[Text as Data 3 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_3.html)
+
+[Text as Data 4 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_4.html)
+
+[Text as Data 5 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_5.html)
+
+
 
 
 
@@ -38,7 +45,6 @@ This repository contains the materials for the first part of the Introduction to
 
 [Support Vector Machine en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/SVM/SVMR.html)
 
-[letterdata.csv (Base de Datos)](/SVM/letterdata.csv)
 
 
 
@@ -50,7 +56,6 @@ This repository contains the materials for the first part of the Introduction to
 
 [Árboles de Decisión en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/DecisionTrees/treesR.html)
 
-[credit.csv (Base de Datos)](/DecisionTrees/credit.csv)
 
 
 
@@ -59,9 +64,8 @@ This repository contains the materials for the first part of the Introduction to
 
 [Random Forest (Slides)](/RandomForests/Random_Forests.pdf)
 
-[Random Forests en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/RandomForests/Random_Forests_R.html)
+[Dickens Austen PCA example (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learnings/PCA.html)
 
-[bank.csv (Base de Datos)](/RandomForests/bank.csv)
 
 
 
@@ -72,7 +76,6 @@ This repository contains the materials for the first part of the Introduction to
 
 [Regresión Lineal y Logit en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/Regresion/RegresionR.html)
 
-[insurance.csv (Base de Datos)](Regresion/insurance.csv)
 
 
 
