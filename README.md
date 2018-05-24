@@ -13,7 +13,7 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 2. Introduction to R
 
-[Vecinos más Cercanos kNN (Slides)](/kNN/kNN.pdf)
+How simple? Have pablo short course
 
 [Vecinos más Cercanos kNN en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/kNN/kNNR.nb.html)
 
@@ -67,7 +67,11 @@ This repository contains the materials for the first part of the Introduction to
 [Dickens Austen PCA example (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learnings/PCA.html)
 
 
+## 7. Social Network Analysis Data
 
+[Social Network Analysis 1 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_networks_1.html)
+
+[Social Network Analysis 2 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_networks_2.html)
 
 
 ## 7. Social Media Data
