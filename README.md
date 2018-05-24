@@ -74,16 +74,15 @@ How simple? Have pablo short course
 [Social Network Analysis 2 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_networks_2.html)
 
 
-## 7. Social Media Data
+## 8. Social Media Data -- Twitter
 
 [Regresión Lineal y Logit (Slides)](/Regresion/Regresion.pdf)
 
-[Regresión Lineal y Logit en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/Regresion/RegresionR.html)
+[Social Media Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_media.html)
 
 
 
 
 
-## Examen Parcial
+## Partial Exam
 
-[Examen Parcial](/Examen/parcial.pdf)
