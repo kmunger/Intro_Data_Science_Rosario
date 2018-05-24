@@ -7,17 +7,17 @@ This repository contains the materials for the first part of the Introduction to
 
 [Syllabus](/syllabus.pdf)
 
-[Introducción (slides)](/Intro/Intro.pdf)
+[Introduction (slides)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/slides/introduction.pdf)
 
 
 
 ## 2. Introduction to R
 
-How simple? Have pablo short course
+[Intro to R 1](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_1.html)
 
-[Vecinos más Cercanos kNN en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/kNN/kNNR.nb.html)
+[Intro to R 2](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_2.html)
 
-
+[Intro to R 3](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_3.html)
 
 
 
@@ -74,11 +74,21 @@ How simple? Have pablo short course
 [Social Network Analysis 2 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_networks_2.html)
 
 
-## 8. Social Media Data -- Twitter
+
+## 8. Web Data -- Scraping and APIs
 
 [Regresión Lineal y Logit (Slides)](/Regresion/Regresion.pdf)
 
-[Social Media Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_media.html)
+[Scraping Web Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/scraping_unstructured_data.html)
+
+[Using_Apis (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/using_apis.html)
+
+
+## 9. Web Data -- Twitter
+
+[Regresión Lineal y Logit (Slides)](/Regresion/Regresion.pdf)
+
+[Social Media Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/social_media.html)
 
 
 
