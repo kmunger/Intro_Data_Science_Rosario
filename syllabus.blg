@@ -1,11 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: syllabus.aux
 I couldn't open database file bib.bib
----line 75 of file syllabus.aux
+---line 43 of file syllabus.aux
  : \bibdata{bib
  :             }
 I'm skipping whatever remains of this command
 I couldn't open style file apsr2.bst
----line 76 of file syllabus.aux
+---line 44 of file syllabus.aux
  : \bibstyle{apsr2
  :                }
 I'm skipping whatever remains of this command

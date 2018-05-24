@@ -1,0 +1,174 @@
+---
+title: "Scraping data from social media"
+author: "Taken from code prepared by Pablo Barbera"
+output: html_document
+---
+
+
+### Scraping web data from Twitter
+
+#### Authenticating
+
+Follow these steps to create your token:
+
+1. Go to apps.twitter.com and sign in.  
+2. Click on "Create New App". You will need to have a phone number associated with your account in order to be able to create a token.  
+3. Fill name, description, and website (it can be anything, even http://www.google.com). Make sure you leave 'Callback URL' empty.
+4. Agree to user conditions.  
+5. From the "Keys and Access Tokens" tab, copy consumer key and consumer secret and paste below
+
+```{r, eval=FALSE}
+# install.packages("ROAuth")
+library(ROAuth)
+requestURL <- "https://api.twitter.com/oauth/request_token"
+accessURL <- "https://api.twitter.com/oauth/access_token"
+authURL <- "https://api.twitter.com/oauth/authorize"
+consumerKey <- "XXXXXXXXXXXX"
+consumerSecret <- "YYYYYYYYYYYYYYYYYYY"
+
+my_oauth <- OAuthFactory$new(consumerKey=consumerKey,
+  consumerSecret=consumerSecret, requestURL=requestURL,
+  accessURL=accessURL, authURL=authURL)
+```
+
+Run the below line and go to the URL that appears on screen. Then, type the PIN into the console (RStudio sometimes doesn't show what you're typing, but it's there!)
+
+```{r, eval=FALSE}
+my_oauth$handshake(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl"))
+```
+
+Now you can save oauth token for use in future sessions with smappR or streamR. Make sure you save it in a folder where this is the only file.
+
+```{r, eval=FALSE}
+save(my_oauth, file="~/git/data-science-workshop/scraping/credentials/twitter-token.Rdata")
+```
+
+#### Collecting data from Twitter's Streaming API
+
+Collecting tweets filtering by keyword:
+
+```{r}
+#install.packages("streamR")
+library(streamR)
+load("C:/Users/kevin/Dropbox/credentials/oauth_token27.RData")
+filterStream(file.name="blizzard-tweets.json", track="blizzard", 
+    timeout=30, oauth=my_oauth)
+```
+
+Note the options:
+- `file.name` indicates the file in your disk where the tweets will be downloaded  
+- `track` is the keyword(s) mentioned in the tweets we want to capture.
+- `timeout` is the number of seconds that the connection will remain open  
+- `oauth` is the OAuth token we are using
+
+Once it has finished, we can open it in R as a data frame with the `parseTweets` function
+```{r}
+tweets <- parseTweets("blizzard-tweets.json")
+str(tweets)
+tweets[1,]
+```
+
+And this is how we would capture tweets mentioning multiple keywords:
+```{r, eval=FALSE}
+filterStream(file.name="snow-tweets.json", 
+	track=c("blizzard", "snow", "winter storm", "snowfall"),
+    tweets=50, oauth=my_oauth)
+```
+
+
+Finally, it's also possible to collect a random sample of tweets. That's what the "sampleStream" function does:
+
+```{r}
+sampleStream(file.name="tweets_random.json", timeout=30, oauth=my_oauth)
+```
+
+Here I'm collecting 30 seconds of tweets. And once again, to open the tweets in R...
+```{r}
+tweets <- parseTweets("tweets_random.json")
+```
+
+What is the most retweeted tweet?
+```{r}
+tweets[which.max(tweets$retweet_count),]
+```
+
+What are the most popular hashtags at the moment? We'll use regular expressions to extract hashtags.
+```{r}
+library(stringr)
+ht <- str_extract_all(tweets$text, "#(\\d|\\w)+")
+ht <- unlist(ht)
+head(sort(table(ht), decreasing = TRUE))
+```
+
+How many tweets mention Justin Bieber?
+```{r}
+length(grep("bieber", tweets$text, ignore.case=TRUE))
+```
+
+
+#### Collecting data from Twitter's REST API
+
+
+This is how you would extract information from user profiles:
+
+```{r}
+library(tweetscores)
+
+reps <- c("RealBenCarson", "tedcruz", "CarlyFiorina", "GrahamBlog", 
+    "GovMikeHuckabee", "GovernorPataki", "RandPaul", "marcorubio", 
+    "RickSantorum", "bobbyjindal", "GovernorPerry", "realDonaldTrump",
+    "JebBush", "GovChristie", "JohnKasich", "ScottWalker", 
+    "gov_gilmore")
+dems <- c('HillaryClinton', 'SenSanders', "MartinOMalley",
+    "LincolnChafee", "JimWebbUSA")
+candidates <- c(reps, dems)
+
+users <- getUsersBatch(screen_names=candidates,
+                       oauth="C:/Users/kevin/Dropbox/credentials")
+str(users)
+```
+
+Who is the candidate with the most followers?
+```{r}
+users[which.max(users$followers_count),]
+```
+
+Download up to 3,200 recent tweets from a Twitter account:
+```{r}
+
+getTimeline(filename="trump-tweets.json", screen_name="realDonaldTrump", 
+    n=1000, oauth="C:/Users/kevin/Dropbox/credentials")
+```
+
+What are the most common hashtags?
+```{r}
+library(streamR)
+library(stringr)
+tweets <- parseTweets("trump-tweets.json")
+ht <- str_extract_all(tweets$text, "#(\\d|\\w)+")
+ht <- unlist(ht)
+head(sort(table(ht), decreasing = TRUE))
+```
+
+Download friends and followers:
+```{r}
+followers <- getFollowers("kmmunger", 
+    oauth="C:/Users/kevin/Dropbox/credentials")
+```
+
+What are the most common words that my followers use to describe themselves on Twitter?
+```{r, fig.height=6, fig.width=6}
+library(quanteda)
+# extract profile descriptions
+users <- getUsersBatch(ids=followers,
+    oauth="C:/Users/kevin/Dropbox/credentials")
+# create table with frequency of word use
+my_dfm <- dfm(users$description[users$description!=""])
+
+# create wordcloud
+par(mar=c(0,0,0,0))
+textplot_wordcloud(my_dfm)
+```
+
+
+

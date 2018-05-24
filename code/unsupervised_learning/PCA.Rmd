@@ -19,71 +19,27 @@ Here we will take all that we've learned about Text as Data and the theory of un
 require(quanteda, warn.conflicts = FALSE, quietly = TRUE)
 
 require(readtext)
-myCorpus <- corpus(readtext("inaugural/*.txt"))
+myCorpus <- corpus(readtext("dickens_austen/*.txt",docvarsfrom = "filenames", dvsep = "_", 
+                 docvarnames = c("author", "title")))
+summary(myCorpus)
 ```
 
+```{r}
+require(sophistication)
+corpus_sentences_browse(myCorpus)
+```
 
-##read in the files
-files <- list.files( full.names=TRUE)
-texts <- lapply(files, readLines)
-
-
-##create labels
-files<-unlist(files)
-files<-gsub("./", "", files )
-files<-gsub(".txt", "", files )
-
-
-##clean up files
-
-head(texts[[1]], n=100)
-tail(texts[[1]], n=500)
-
-texts[[1]]<-head(texts[[1]], -366)
-texts[[1]]<-tail(texts[[1]], -29)
+### 2. Dividing texts into snippets
+```{r}
+austen_corpus<-corpus_subset(myCorpus, author == "austen")
+dickens_corpus<-corpus_subset(myCorpus, author == "dickens")
+mystery_corpus<-corpus_subset(myCorpus, author == "mystery")
 
 
-texts[[2]]<-head(texts[[2]], -366)
-texts[[2]]<-tail(texts[[2]], -29)
 
-texts[[3]]<-head(texts[[3]], -366)
-texts[[3]]<-tail(texts[[3]], -29)
-
-texts[[4]]<-head(texts[[4]], -366)
-texts[[4]]<-tail(texts[[4]], -29)
-
-texts[[5]]<-head(texts[[5]], -366)
-texts[[5]]<-tail(texts[[5]], -29)
-
-
-texts[[6]]<-head(texts[[6]], -360)
-texts[[6]]<-tail(texts[[6]], -33)
-
-
-texts[[7]]<-head(texts[[7]], -363)
-texts[[7]]<-tail(texts[[7]], -29)
-
-texts[[8]]<-head(texts[[8]], -363)
-texts[[8]]<-tail(texts[[8]], -29)
-
-
-texts[[9]]<-head(texts[[9]], -363)
-texts[[9]]<-tail(texts[[9]], -29)
-
-
-texts[[10]]<-head(texts[[10]], -363)
-texts[[10]]<-tail(texts[[10]], -29)
-
-texts[[11]]<-head(texts[[11]], -363)
-
-##remove blank characters--note that this isn't strictly necessary
-texts<-lapply(1:11, function(i) subset(texts[[i]], texts[[i]]!=""))
-
-
-##chopping up the texts into the right size chunks, according to P&H
-
-# combine all books
-austen<-unlist(texts[1:5])
+austen<-tokens(paste(unlist((austen_corpus$documents$texts)), collapse=' '))
+dickens<-tokens(paste(unlist((dickens_corpus$documents$texts)), collapse=' '))
+mystery<-tokens(paste(unlist((mystery_corpus$documents$texts)), collapse=' '))
 
 
 #initialize
@@ -91,33 +47,25 @@ austen_snippets<-vector()
 
 
 ##decide on snippet length
-snip_length<-150
+snip_length<-1500
 
 ## divide up austen texts
-for(i in 1:ceiling(length(austen)/snip_length)){
+for(i in 1:ceiling(length(austen$text1)/snip_length)){
   index<-(i-1)*snip_length + 1
   # create appropriate length snippet
-  austen_snippets[i]<-paste(austen[index:(index+snip_length)],sep="", collapse=" ")
+  austen_snippets[i]<-paste(austen$text1[index:(index+snip_length)],sep="", collapse=" ")
 }
 
-
-##now for dickens
-
-dickens<-unlist(texts[6:10])
 
 #initialize
-dickens_snippets<-vector()
+dickens_snippets<-vector() 
 
 ## divide up dickens texts
-for(i in 1:ceiling(length(dickens)/snip_length)){
+for(i in 1:ceiling(length(dickens$text1)/snip_length)){
   index<-(i-1)*snip_length + 1
   # create appropriate length snippet
-  dickens_snippets[i]<-paste(dickens[index:(index+snip_length)],sep="", collapse=" ")
+  dickens_snippets[i]<-paste(dickens$text1[index:(index+snip_length)],sep="", collapse=" ")
 }
-
-## clean up mystery document
-
-mystery<-unlist(texts[11])
 
 
 #initialize
@@ -125,22 +73,23 @@ mystery_snippets<-vector()
 
 
 ## divide up mystery text
-for(i in 1:ceiling(length(mystery)/snip_length)){
+for(i in 1:ceiling(ntoken(mystery)/snip_length)){
   index<-(i-1)*snip_length + 1
   # create appropriate length snippet
-  mystery_snippets[i]<-paste(mystery[index:(index+snip_length)],sep="", collapse=" ")
+  mystery_snippets[i]<-paste(mystery$text1[index:(index+snip_length)],sep="", collapse=" ")
 }
-
 
 ##combine the snippets
 snippets<-c(austen_snippets,dickens_snippets)
 
-
 #create a labeled vector
 authors<-c(rep("austen", length(austen_snippets)), rep("dickens", length(dickens_snippets)))
 
+```
 
-###list function words--taken from P & H 
+### 3. create DFM of just function words
+```{r}
+###list function words--taken from Peng & Hengartner
 function_words<-c("a", "been", "had", "its", "one", "the", "were", "all", "but", "has", "may", "only", "their", "what",
                   "also", "by", "have", "more", "or", "then", "when", "an", "can", "her", "must", "our", "there", "which",
                   "and", "do", "his", "my", "should", "things", "who",  "any", "down", "if", "no", "so", "this", "will",  
@@ -150,27 +99,27 @@ function_words<-c("a", "been", "had", "its", "one", "the", "were", "all", "but",
 
 ##Create DFMs of just the function words
 
-snippets_dfm<-dfm(snippets, keptFeatures=function_words)
+snippets_dfm<-dfm(snippets, select = function_words)
+
+mystery_dfm<-dfm(mystery_snippets, select = function_words)
+```
 
 
-mystery_dfm<-dfm(mystery_snippets, keptFeatures=function_words)
 
 
-
+### 3. Run PCA
+```{r}
 ###run PCA
 
-
 snippets_pca<-prcomp(snippets_dfm, center=TRUE, scale.=TRUE)
-?prcomp
+
+#snippets_pca<-prcomp(snippets_dfm)
 
 ##examine number of components
 
 plot(snippets_pca, type = "l")
 
 ##packages for visualization--code taken from http://www.r-bloggers.com/computing-and-visualizing-pca-in-r/
-
-
-install_github("ggbiplot", "vqv")
 
 
 library(ggbiplot)
@@ -181,9 +130,13 @@ g <- ggbiplot(snippets_pca, obs.scale = 1, var.scale = 1,
 g<- g + theme(legend.direction = 'horizontal', 
               legend.position = 'top')
 g
+```
 
 
 
+
+### 4. Predict the identity of the mystery book
+```{r}
 
 ##Predict 
 predicted<-predict(snippets_pca, newdata=mystery_dfm)
@@ -192,13 +145,13 @@ predicted<-predict(snippets_pca, newdata=mystery_dfm)
 ##Fisher's linear discrimination rule: choose the group that has a closer group mean; just 2 dimensions
 
 #find the mean of the first two PCs 
-austen_pc1_mean<-mean(snippets_pca$x[1:326,1])
-austen_pc2_mean<-mean(snippets_pca$x[1:326,2])
+austen_pc1_mean<-mean(snippets_pca$x[1:length(austen_snippets),1])
+austen_pc2_mean<-mean(snippets_pca$x[1:length(austen_snippets),2])
 austen_mean<-c(austen_pc1_mean, austen_pc2_mean)
 
 
-dickens_pc1_mean<-mean(snippets_pca$x[327:1033,1])
-dickens_pc2_mean<-mean(snippets_pca$x[327:1033,2])
+dickens_pc1_mean<-mean(snippets_pca$x[length(austen_snippets):length(snippets),1])
+dickens_pc2_mean<-mean(snippets_pca$x[length(austen_snippets):length(snippets),2])
 dickens_mean<-c(dickens_pc1_mean, dickens_pc2_mean)
 
 
@@ -212,25 +165,24 @@ mystery_mean<-c(mystery_pc1_mean, mystery_pc2_mean)
 #calculate the distances
 austen_distance<-dist(rbind(austen_mean, mystery_mean))
 dickens_distance<-dist(rbind(dickens_mean, mystery_mean))
+austen_distance
+dickens_distance
+```
 
-###it's austen!
+
+###It's Austen!
 
 ###how else might we do this? 
 
 
 
 
-
-
-
-
-
-
-
-
 ### k nearest neighbors! 
 
+### 5. Run KNN
+```{r}
 #install.packages("class")
+
 library(class)
 
 ?knn
@@ -239,56 +191,19 @@ library(class)
 
 
 knn_1<-knn(train=snippets_dfm, test = mystery_dfm, cl = authors, k=1 )
+knn_1
+```
 
+### 6. Try different values for K
+```{r}
 
 knn_3<-knn(train=snippets_dfm, test = mystery_dfm, cl = authors, k=3 )
 
 knn_10<-knn(train=snippets_dfm, test = mystery_dfm, cl = authors, k=10 )
 
-## well then....
 
-
-
-
-## Example taken from Prof. Spirling's research on Native American treatis
-
-#predict pca results with rf of tdm
-#use all treaty types
-
-rm(list=ls())
-setwd("c:/Users/kevin/Dropbox/Text_As_Data_Spring_2016_SpirlingMunger/homeworks/random_forests")
-
-#note that this data is tf-idf weighted
-
-load("treaties.rdata")
-
-#run random forest with 
-# x= the document term matrix (note odd syntax where x come first)
-# y= estimated treaty harshness
-require(randomForest)
-mod.rf<-randomForest(treaty_DTM,treaty_harshness,ntree=500,importance=T)
-?randomForest
-
-#plot variable importance
-varImpPlot(mod.rf, type=1)
-?varImpPlot
-
-
-##let's see what happens when we use way fewer trees
-
-set.seed(240)
-
-mod.rf_1<-randomForest(treaty_DTM,treaty_harshness,ntree=10,importance=T)
-
-
-
-mod.rf_2<-randomForest(treaty_DTM,treaty_harshness,ntree=10,importance=T)
-
-
-
-varImpPlot(mod.rf_1, type=1)
-varImpPlot(mod.rf_2, type=1)
-
-
+knn_3
+knn_10
+```
 
 
