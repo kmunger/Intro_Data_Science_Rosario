@@ -1,6 +1,8 @@
 # Introduction to Data Science (Part 1)
 This repository contains the materials for the first part of the Introduction to Data Science course offered by the University of Rosario in June, 2018. This portion of the course covers an introduction to the foundations of data science, text analysis, working with social media data and some unsupervised models. Most section entails a theoretical overview of the topic and coding examples in R.  
 
+### Much of this course is a combination of courses I have helped teach in the past; all of the materials here are free for anyone to use.
+
 ### Instructor: Kevin Munger
 
 ## 1. Introduction to Data Science
@@ -23,6 +25,9 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 3. Introduction to Using Text as Data
 
+Modify Pablo's slides
+
+
 [Introduction to Using Text as Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/intro_text_as_data.html)
 
 [Text as Data 1 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_1.html)
@@ -39,9 +44,9 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 4. Introduction to Unsupervised Models
+## 4. Unsupervised Models -- KNN
 
-[Support Vector Machine (Slides)](/SVM/SVM.pdf)
+modify Brian's slides
 
 [Support Vector Machine en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/SVM/SVMR.html)
 
@@ -49,7 +54,7 @@ This repository contains the materials for the first part of the Introduction to
 
 
 
-## 5. More Unsupervised Models
+## 5. Unsupervised models -- Topic Models
 
 [Árboles de Decisión (Slides)](/DecisionTrees/DecisionTrees.pdf)
 
@@ -62,12 +67,15 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 6. Text as Data Applications
 
-[Random Forest (Slides)](/RandomForests/Random_Forests.pdf)
+???
 
 [Dickens Austen PCA example (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learnings/PCA.html)
 
 
 ## 7. Social Network Analysis Data
+
+Modify Pablo's slides
+
 
 [Social Network Analysis 1 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_networks_1.html)
 
@@ -77,7 +85,8 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 8. Web Data -- Scraping and APIs
 
-[Regresión Lineal y Logit (Slides)](/Regresion/Regresion.pdf)
+Modify Pablo's slides
+
 
 [Scraping Web Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/scraping_unstructured_data.html)
 
@@ -86,7 +95,7 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 9. Web Data -- Twitter
 
-[Regresión Lineal y Logit (Slides)](/Regresion/Regresion.pdf)
+Modify Pablo's slides
 
 [Social Media Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/social_media.html)
 
