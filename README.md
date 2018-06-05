@@ -9,7 +9,7 @@ This repository contains the materials for the first part of the Introduction to
 
 [Syllabus](/syllabus.pdf)
 
-[Introduction (slides)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/slides/introduction.pdf)
+[Introduction (slides)](/slides/introduction.pdf)
 
 
 
