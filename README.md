@@ -15,7 +15,7 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 2. Introduction to R
 
-Modify Pablo's slides 
+[Intro to R (slides)](/slides/intro_R.pdf)
 
 [Intro to R 1](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_1.html)
 
@@ -27,7 +27,7 @@ Modify Pablo's slides
 
 ## 3. Introduction to Using Text as Data
 
-Modify Pablo's slides
+[Intro to Text as Data (slides)](/slides/intro_TAD.pdf)
 
 
 [Introduction to Using Text as Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/intro_text_as_data.html)
@@ -48,7 +48,7 @@ Modify Pablo's slides
 
 ## 4. Unsupervised Models 
 
-modify Pablo's slides
+[Unsupervised Models (slides)](/slides/Unsupervised_Models.pdf)
 
 [Support Vector Machine en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/SVM/SVMR.html)
 
@@ -56,14 +56,12 @@ modify Pablo's slides
 
 ## 5. Text as Data Applications
 
-???
-
 [Dickens Austen PCA example (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learnings/PCA.html)
 
 
 ## 6. Social Network Analysis
 
-Modify Pablo's slides
+[Social Network Analysis (slides)](/slides/sna.pdf)
 
 
 [Social Network Analysis 1 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/network_analysis/social_networks_1.html)
@@ -74,8 +72,7 @@ Modify Pablo's slides
 
 ## 7. Web Data -- Scraping and APIs
 
-Modify Pablo's slides
-
+[Web Data 1 (slides)](/slides/web_1.pdf)
 
 [Scraping Web Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/scraping_unstructured_data.html)
 
@@ -84,11 +81,9 @@ Modify Pablo's slides
 
 ## 8. Web Data -- Twitter
 
-Modify Pablo's slides
+[Web Data 2 (slides)](/slides/web_2.pdf)
 
 [Social Media Data (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/social_media.html)
-
-
 
 
 
