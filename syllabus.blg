@@ -1,14 +1,15 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: syllabus.aux
 I couldn't open database file bib.bib
----line 43 of file syllabus.aux
+---line 19 of file syllabus.aux
  : \bibdata{bib
  :             }
 I'm skipping whatever remains of this command
 I couldn't open style file apsr2.bst
----line 44 of file syllabus.aux
+---line 20 of file syllabus.aux
  : \bibstyle{apsr2
  :                }
 I'm skipping whatever remains of this command
+I found no \citation commands---while reading file syllabus.aux
 I found no database files---while reading file syllabus.aux
 I found no style file---while reading file syllabus.aux
-(There were 4 error messages)
+(There were 5 error messages)
