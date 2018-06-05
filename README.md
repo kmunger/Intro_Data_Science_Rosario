@@ -47,13 +47,13 @@ This repository contains the materials for the first part of the Introduction to
 
 [Unsupervised Models (slides)](/slides/Unsupervised_Models.pdf)
 
-[Support Vector Machine en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/SVM/SVMR.html)
+[Unsupervised Models of Text (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learning/unsupervised_text.html)
 
 
 
 ## 5. Text as Data Applications
 
-[Dickens Austen PCA example (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learnings/PCA.html)
+[Dickens Austen PCA example (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learning/PCA.html)
 
 
 ## 6. Social Network Analysis
