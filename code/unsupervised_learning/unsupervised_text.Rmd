@@ -1,0 +1,200 @@
+# Unsupervised Learning
+
+## Exploring text datasets
+
+
+```{r}
+# reading data and computing additional variables
+library(readtext)
+library(quanteda)
+library(quanteda.corpora)
+
+
+# saveing corpus object from quanteda.corpora
+data_corpus_SOTU<-data_corpus_sotu
+summary(data_corpus_SOTU)
+```
+ 
+### Readability and lexical diversity 
+ 
+A text document can be characterized based on its readability and lexical diversity, which capture different aspects of its complexity. There are MANY indices that compute this. Note that each of these functions is applied to a different type of object (`corpus` or `dfm`).
+
+```{r}
+# readability
+measure <- "Flesch"
+
+SOTU_stat <- textstat_readability(data_corpus_SOTU, measure)
+
+SOTU_year <- lubridate::year(docvars(data_corpus_SOTU, "Date"))
+SOTU_df <- data.frame("year" = SOTU_year, "SOTU_stat" = SOTU_stat$Flesch)
+plot(SOTU_df)
+
+# lexical diversity -- Type to Token ratio
+SOTU_stat <- textstat_lexdiv(dfm(data_corpus_SOTU) )
+
+SOTU_year <- lubridate::year(docvars(data_corpus_SOTU, "Date"))
+SOTU_df <- data.frame("year" = SOTU_year, "SOTU_stat" = SOTU_stat$TTR)
+plot(SOTU_df)
+```
+
+### Identifying most unique features of documents
+
+One approach is to use _TF-IDF_ weights instead of just token counts in the DFM:
+
+```{r}
+rew <- dfm_tfidf(dfm(data_corpus_SOTU))
+# now most frequent features are different
+topfeatures(dfm(data_corpus_SOTU))
+topfeatures(rew)
+```
+
+
+
+
+
+### Clustering documents and features
+
+We can identify documents that are similar to one another based on the frequency of words, using `similarity`. There's different metrics to compute similarity. Here we explore two of them: [Jaccard distance](https://en.wikipedia.org/wiki/Jaccard_index) and [Cosine distance](https://en.wikipedia.org/wiki/Cosine_similarity).
+
+```{r}
+# document similarities
+dfm_sotu<-dfm(data_corpus_SOTU)
+
+
+simils <- textstat_simil(dfm_sotu, "Trump-2018", margin="documents", method="jaccard")
+
+
+# most similar documents
+df <- data.frame(
+  docname = rownames(simils),
+  simil = as.numeric(simils),
+  stringsAsFactors=F
+)
+tail(df[order(simils),])
+head(df[order(simils),])
+
+# another example
+simils <- textstat_simil(dfm_sotu, "Obama-2012", margin="documents", method="jaccard")
+# most similar documents
+df <- data.frame(
+  docname = rownames(simils),
+  simil = as.numeric(simils),
+  stringsAsFactors=F
+)
+tail(df[order(simils),])
+head(df[order(simils),])
+
+```
+
+And the opposite: term similarity based on the frequency with which they appear in documents:
+
+```{r}
+# term similarities
+simils <- textstat_simil(dfm_sotu, "unemployment", margin="features", method="cosine")
+# most similar features
+df <- data.frame(
+  featname = rownames(simils),
+  simil = as.numeric(simils),
+  stringsAsFactors=F
+)
+head(df[order(simils, decreasing=TRUE),], n=10)
+
+# another example...
+simils <- textstat_simil(dfm_sotu, "america", margin="features", method="cosine")
+# most similar features
+df <- data.frame(
+  featname = rownames(simils),
+  simil = as.numeric(simils),
+  stringsAsFactors=F
+)
+head(df[order(simils, decreasing=TRUE),], n=10)
+
+```
+
+Each of these can then be used to cluster documents:
+
+```{r}
+recent <- dfm_sotu[190:239,]
+# compute distances
+distances <- textstat_dist(recent, margin="documents")
+as.matrix(distances)[1:5, 1:5]
+
+# clustering
+cluster <- hclust(distances)
+plot(cluster)
+```
+
+
+A different type of clustering is [principal component analysis](https://en.wikipedia.org/wiki/Principal_component_analysis). This technique will try to identify a set of uncorrelated variables that capture most of the variance in the document-feature matrix. The first component will always capture the largest proportion of the variance; the second captures the second largest, etc. Looking at the relative proportion of the variance captured by the first component vs the rest, we can see to what extent we can reduce the dataset to just one dimension.
+
+```{r}
+# Principal components analysis
+pca <- prcomp(t(as.matrix(dfm_sotu))) 
+plot(pca) # first PC captures most of the variance
+
+# plot first principal component
+plot(pca$rotation[,1], pca$rotation[,2])
+text(pca$rotation[,1], pca$rotation[,2], labels=lubridate::year(docvars(data_corpus_SOTU, "Date")))
+
+# looking at features for each PC
+df <- data.frame(
+  featname = featnames(dfm_sotu),
+  dim1 = pca$x[,1],
+  dim2 = pca$x[,2],
+  stringsAsFactors=FALSE
+)
+
+head(df[order(df$dim1),])
+tail(df[order(df$dim1),])
+
+head(df[order(df$dim2),])
+tail(df[order(df$dim2),])
+```
+
+A similar dimensionality reduction technique is [correspondence analysis](https://en.wikipedia.org/wiki/Correspondence_analysis). 
+
+```{r}
+out <- textmodel_ca(dfm_sotu)
+
+# documents
+df <- data.frame(
+  docname = docnames(dfm_sotu),
+  year = lubridate::year(docvars(data_corpus_SOTU, "Date")),
+  dim1 = out$rowcoord[,1],
+  dim2 = out$rowcoord[,2],
+  stringsAsFactors=FALSE
+)
+
+head(df[order(df$dim1),])
+tail(df[order(df$dim1),])
+
+head(df[order(df$dim2),])
+tail(df[order(df$dim2),])
+
+plot(df$dim1, df$dim2, type="n")
+text(df$dim1, df$dim2, labels=df$year)
+
+# features
+df <- data.frame(
+  featname = featnames(dfm_sotu),
+  dim1 = out$colcoord[,1],
+  dim2 = out$colcoord[,2],
+  stringsAsFactors=FALSE
+)
+
+head(df[order(df$dim1),])
+tail(df[order(df$dim1),])
+
+head(df[order(df$dim2),])
+tail(df[order(df$dim2),])
+```
+
+
+
+
+
+
+
+
+
+

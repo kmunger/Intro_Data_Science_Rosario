@@ -124,6 +124,13 @@ plot(snippets_pca, type = "l")
 
 library(ggbiplot)
 
+##Plotting without the labels
+g <- ggbiplot(snippets_pca, obs.scale = 1, var.scale = 1)
+g<- g + theme(legend.direction = 'horizontal', 
+              legend.position = 'top')
+g
+
+##Plotting with the labels
 
 g <- ggbiplot(snippets_pca, obs.scale = 1, var.scale = 1, 
               groups = authors)
