@@ -15,6 +15,8 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 2. Introduction to R
 
+Modify Pablo's slides 
+
 [Intro to R 1](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_1.html)
 
 [Intro to R 2](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_2.html)
@@ -44,35 +46,22 @@ Modify Pablo's slides
 
 
 
-## 4. Unsupervised Models -- KNN
+## 4. Unsupervised Models 
 
-modify Brian's slides
+modify Pablo's slides
 
 [Support Vector Machine en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/SVM/SVMR.html)
 
 
 
-
-
-## 5. Unsupervised models -- Topic Models
-
-[Árboles de Decisión (Slides)](/DecisionTrees/DecisionTrees.pdf)
-
-
-[Árboles de Decisión en R (Guía)](http://htmlpreview.github.io/?https://github.com/jagallegod/Big-Data-4-Public-and-Private-Sectors/blob/master/DecisionTrees/treesR.html)
-
-
-
-
-
-## 6. Text as Data Applications
+## 5. Text as Data Applications
 
 ???
 
 [Dickens Austen PCA example (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/unsupervised_learnings/PCA.html)
 
 
-## 7. Social Network Analysis Data
+## 6. Social Network Analysis
 
 Modify Pablo's slides
 
@@ -83,7 +72,7 @@ Modify Pablo's slides
 
 
 
-## 8. Web Data -- Scraping and APIs
+## 7. Web Data -- Scraping and APIs
 
 Modify Pablo's slides
 
@@ -93,7 +82,7 @@ Modify Pablo's slides
 [Using_Apis (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/web_data/using_apis.html)
 
 
-## 9. Web Data -- Twitter
+## 8. Web Data -- Twitter
 
 Modify Pablo's slides
 
