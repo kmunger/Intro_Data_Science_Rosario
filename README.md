@@ -40,9 +40,6 @@ This repository contains the materials for the first part of the Introduction to
 
 [Text as Data 4 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_4.html)
 
-[Text as Data 5 (R)](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_text_as_data/text_as_data_5.html)
-
-
 
 
 
