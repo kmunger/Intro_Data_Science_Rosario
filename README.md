@@ -15,8 +15,6 @@ This repository contains the materials for the first part of the Introduction to
 
 ## 2. Introduction to R
 
-[Intro to R (slides)](/slides/intro_R.pdf)
-
 [Intro to R 1](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_1.html)
 
 [Intro to R 2](http://htmlpreview.github.io/?https://github.com/kmunger/Intro_Data_Science_Rosario/blob/master/code/intro_R/intro_R_2.html)
