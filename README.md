@@ -1,5 +1,5 @@
 # Introduction to Data Science (Part 1)
-This repository contains the materials for the first part of the Introduction to Data Science course offered by the University of Rosario in June, 2018. This portion of the course covers an introduction to the foundations of data science, text analysis, working with social media data and some unsupervised models. Most section entails a theoretical overview of the topic and coding examples in R.  
+This repository contains the materials for the first part of the Introduction to Data Science course offered by the University of Rosario in June, 2018. This portion of the course covers an introduction to the foundations of data science, text analysis, working with social media data and some unsupervised models. Most sections contain a theoretical overview of the topic and coding examples in R.  
 
 ### Much of this course is a combination of courses I have helped teach in the past; all of the materials here are free for anyone to use.
 
