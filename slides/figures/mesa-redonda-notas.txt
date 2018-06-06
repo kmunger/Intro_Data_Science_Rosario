@@ -1,0 +1,86 @@
+René
+
+- Twitter es la tensión entre llamar la atención y sentido de la oportunidad
+- 4 ideas:
+	- libertad vs control
+	- rol de la mediación: erosionando la democracia liberal?
+	- una nueva política? o la política de siempre, pero en nuevas plataformas?
+	- tensión entre lo público y lo privado
+	- concentración o fragmentación del poder
+
+Marco Moreno
+
+- Desafección: actitud dominante en Chile?
+- "ciudadanía intermitente": activismo individualista, más puntual, crecientemente apolítico
+
+Mi intervención:
+
+polemizar, visión un poco más optimista, sustentada en la investigación empírica sobre estas cuestiones:
+- idea: las redes sociales son una herramienta, y por tanto sus implicaciones positivas o negativas dependen de cómo se usen, pero en general están teniendo un impacto positivo en la política
+
+redes sociales, 3 cambios
+- permiten a políticos llegar directamente a las masas
+	* reduce la importancia de los medios de comunicación, democratización del acceso a la información
+	* mejora accountability: ciudadanos pueden ejercer como un altavoz de corrupción.
+	* mayor cercanía de los políticos a los ciudadanos
+	* crisis del periodismo
+	* pero periodistas juegan un papel esencial: fact-checking, contextualización, gate-keeping de ideas extremas
+	* pero los periodistas siguen activos en redes sociales!
+
+
+- contenido político se presenta con una capa social
+	* nuestros amigos se convierten en los nuevos periodistas, con una labor de selección y contextualización
+	* menos importancia de sesgos partidistas, o de medios sesgados (Messing y Westwood, Political Communication)
+	* exposición accidental a información, incluso aquellos que no leen periódicos, ven conversaciones sobre política quieran o no -- por tanto incrementa el interés en la política
+	* quizás más influenciados por individuos con ideologías extremas, que son más activos (SSCR)
+
+
+- facilita la emergencia de campañas de activismo
+	* organizadas alrededor de un hashtag, puede sustituir organizaciones de activismo tradicional, "intermitente"
+	* más vulnerables: dependencia extrema en estas herramientas puede ser perjudicial, particularmente cuando los gobiernos autocráticos pueden cortar el acceso a la información (investigación en este sentido indica que los gobiernos tienen mucho poder de control). Pero en general redes son muy "resilientes": sobreviven ataques malintencionados, utilizan otros medios, e.g. en Hong Kong utilizaron FireChat, una red social tipo mesh, menos centralizada, que permite sobrepasar la censura del gobierno chino.
+	* sin embargo, las campañas exitosas siguen dependiendo en organizaciones tradicionales
+	* pero se pueden volver más abiertas, llegar a un mayor número de personas
+	* esto se aplica también a campañas electorales, que tienen que lidiar con el dilema de hacer una campaña de "código libre", más abierta, pero perder control del mensaje
+
+
+
+Cesar:
+- Dilemas de los opuestos: control y libertad
+- Mucha especulación en los estudios empíricos
+	* calificar la identificación ideológica en función de los seguidores no es suficiente, millennials no se identifican con izquierda y derecha, muy reduccionista y muy simplista, las conclusiones pueden estar muy sesgadas
+- no hay que pensar en las redes sociales de manera instrumental
+
+
+Evidencia:
+- de acuerdo en necesidad de teorizar
+- evidencia empírica sin teoría son sólo números; teoría sin evidencia empírica es especulación, porque no es posible saber si es cierto o falso
+- en mi investigación intento combinar ambos componentes.
+- Significado de izquierda y derecha puede estar cambiando, pero 90% de Republicanos votan por Trump, y 90% de Demócratas votan por Clinton. La identificación ideológica está muy correlacionada con posiciones en diferentes temas políticos y comportamientos, consume de medios, etc.
+
+
+Hector Perez:
+- el uso de big data ha generado un cambio positivo en la política? Por ejemplo, Donald Trump.
+	* medios de comunicación tradicionales jugaron un papel muy importante: 2000 millones de dolares de publicidad gratuita
+- los políticos pueden llegar a la masa, pero muchos ciudadanos no están en las redes sociales
+	* spill-over: medios de comunicación recogen lo que ocurre en las redes
+- cualquier persona puede ser un altavoz?
+	* evidencia de que cualquier contenido puede ser viral
+- uso de código abierto
+
+Pablo Muñoz:
+- ciudadanos se alejan de formas tradicionales de participación
+- posiciones mas fluidas en la red, pero más episódicas, volátil
+- concebir la actividad política de otra manera?
+
+
+- dataismo 
+- investigación social y teoría social dejan de ser relevantes?
+- deep learning
+
+* big data nos permite estudiar hipótesis sobre teorías sociales
+* acceso a datos de redes, estudio de redes ya empezó en 1930, pero no podíamos testar mucha hipótesis sobre comportamiento social
+
+* deep learning: cada vez dependemos más en algoritmos, que no entendemos, y pueden generar discriminación
+	- predicción para saber si pueden dejar salir bajo fianza
+
+	

@@ -1,0 +1,21 @@
+\frametitle{Example text: cosine similarity in R}
+	\begin{center}
+		\begin{footnotesize}
+			\begin{verbatim}
+			toyDfm <- as.dfm(matrix(c(3,2,1,2,2, 2,1,0,1,2),
+			nrow = 2, byrow = TRUE))
+			colnames(toyDfm) <- c("Gilbert", "hurricane", "rain", "storm", "winds")
+			toyDfm
+			## Document-feature matrix of: 2 documents, 5 features (10% sparse).
+			## 2 x 5 sparse Matrix of class "dfm"
+			##        features
+			## docs    Gilbert hurricane rain storm winds
+			##   text1       3         2    1     2     2
+			##   text2       2         1    0     1     2
+
+			textstat_simil(toyDfm, method = "cosine")
+			##           text1
+			## text2 0.9438798
+			\end{verbatim}
+		\end{footnotesize}
+	\end{center}

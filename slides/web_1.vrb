@@ -1,0 +1,12 @@
+\frametitle{JSON}
+	Response is often in \href{https://maps.googleapis.com/maps/api/geocode/json?address=budapest}{JSON format} (Javascript Object Notation). \\ \pause
+	\begin{itemize}[<+->]
+		\item Type: \verb|content(r, "text")|
+		\item Data stored in key-value pairs. Why? Lightweight, more flexible than traditional table format.
+		\item Curly brackets embrace objets; square brackets enclose arrays (vectors)
+		\item Use \texttt{fromJSON} function from \texttt{jsonlite} package to read JSON data into R
+		\item But many packages have their own specific functions to read data in JSON format; \verb|content(r, "parsed")|
+	\end{itemize}
+
+
+
