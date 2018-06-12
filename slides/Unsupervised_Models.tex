@@ -81,7 +81,7 @@
 
 
 \begin{frame}
-	\frametitle{Quantities for comparing texts}
+	\frametitle{Unsupervised measures for text}
 	\begin{description}
 		\item[Length] in characters, words, lines, sentences, paragraphs,
 		pages, sections, chapters, etc.
@@ -523,8 +523,7 @@
 		\item \pause assign each item to the class of the centroid that is ``closest''
 		\begin{itemize}
 			\item Euclidean distance is most common
-			\item any others may also be used (Manhattan, Minkowski,
-			Mahalanobis, etc.)
+			\item any others may also be used (Manhattan, etc.)
 			\item (assumes feature vectors have been normalised within item)
 		\end{itemize}
 		\item  \pause update: recompute the cluster centroids as the mean value of
@@ -592,8 +591,7 @@
 		the features through either selection or projection to a
 		lower-dimensional representation
 		\begin{enumerate}
-			\item local projection: reducing features within document
-			\item global projection: reducing features across all documents (Sch\"utze and Silverstein, 1997)
+
 			\item \pause SVD methods, such PCA on a normalised feature matrix
 			\item usually simple threshold-based truncation is used \newline (keep all
 			but 100 highest frequency or tf-idf terms)
@@ -680,9 +678,7 @@
 		``themes'' in an unstructured corpus
 		\item Requires no prior information, training set, or special
 		annotation of the texts \newline -- only a decision on $K$ (number of topics)
-		\item A probabilistic, generative advance on several earlier
-		methods, ``Latent Semantic Analysis'' (LSA) and ``probabilistic latent
-		semantic indexing'' (pLSI)
+
 	\end{itemize}
 \end{frame}
 
@@ -698,10 +694,7 @@
 	\begin{itemize}[<+->]
 		\item Text gets converted into a quantitative matrix of
 		\alert{features}
-		\begin{itemize}
-			\item words, typically
-			\item could be dictionary entries, or parts of speech
-		\end{itemize}
+
 		\item Documents are scaled based on similarity/distance in feature use
 		\item Fundamental problem: \alert{distance on which scale?}
 		\begin{itemize}
@@ -729,54 +722,6 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Singular Value Decomposition}  
-	\begin{itemize}
-		\item A matrix $\underset{n\times
-			k}{\mathbf{X}}$ can be represented in a dimensionality equal to its
-		rank $d$ as:
-		\begin{align}
-		\underset{n\times k}{\mathbf{X}} &= \underset{n\times d}{\mathbf{U}}
-		\ 
-		\underset{d\times d}{\mathbf{\Sigma}} \ \underset{d\times k}{\mathbf{V}'}
-		\end{align}
-		\item The \textbf{U}, $\mathbf{\Sigma}$, and \textbf{V} matrixes ``relocate''
-		the elements of $\mathbf{X}$ onto new coordinate vectors in
-		$d$-dimensional Euclidean space
-		\item Row variables of \textbf{X} become points on the \textbf{U}
-		column coordinates, and the column variables of \textbf{X} become
-		points on the \textbf{V} column coordinates
-		\item The coordinate vectors are perpendicular (\emph{orthogonal}) to
-		each other and are normalized to unit length
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Correspondence analysis}
-	
-	\begin{enumerate}[<+->]
-		\item Compute matrix of standardized residuals, $\mathbf{S}$:\\
-		\vspace{-.8cm}
-		\begin{align*}\mathbf{S} = \mathbf{D}_r^{1/2} (\mathbf{P}-\mathbf{rc}^{T})\mathbf{D}_c^{1/2} \end{align*}\\
-		\vspace{-.3cm}
-		\begin{tabular}{ll}
-			where & $\mathbf{P}=\mathbf{Y}/\sum_{ij}y_{ij}$\\
-			&$\mathbf{r}$, $\mathbf{c}$ are row/column masses: e.g. $r_i=\sum_j p_{ij}$\\
-			&$\mathbf{D}_r=\textrm{diag}(\mathbf{r})$, $\mathbf{D}_c=\textrm{diag}(\mathbf{c})$
-		\end{tabular}
-		\vspace{.25cm}
-		\item Calculate SVD of $\mathbf{S}$
-		\vspace{.25cm}
-		\item Project rows and columns onto low-dimensional space:\\
-		\vspace{-.8cm}
-		\begin{align*}
-		\mathbf{\theta}=\mathbf{D}_r^{1/2} \mathbf{U} & \textrm{ for rows (documents)}\\
-		\vspace{-.2cm}
-		\mathbf{\phi}=\mathbf{D}_c^{1/2} \mathbf{V} &  \textrm{ for columns (words)}
-		\end{align*}
-		\item[] Mathematically close to \alert{log-linear poisson regression model} {\color{gray}\footnotesize{(Lowe, 2008)}}
-	\end{enumerate}
-\end{frame}
 
 \begin{frame}
 	\frametitle{Example: Schonhardt-Bailey (2008) - speakers}

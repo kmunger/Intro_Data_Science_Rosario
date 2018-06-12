@@ -11,7 +11,8 @@ Read in the data from `humansofnewyork.csv` into `R` and perform some sample tas
 
 
 ```{r}
-hony <- read.csv("./humansofnewyork.csv", stringsAsFactors=FALSE) # read in data, character vectors treated as character vectors (not factors)
+getwd()
+hony <- read.csv("humansofnewyork.csv", stringsAsFactors=FALSE) # read in data, character vectors treated as character vectors (not factors)
 str(hony) # examine its structure
 ```
 

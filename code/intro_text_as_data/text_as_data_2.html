@@ -132,6 +132,7 @@ $(document).ready(function () {
 <p>There are several useful string manipulation functions in the R base library. In addition, we will look at the <code>stringr</code> package which provides an additional interface for simple text manipulation.</p>
 <p>The fundamental type (or <code>mode</code>) in which R stores text is the character vector. The most simple case is a character vector of length one. The <code>nchar</code> function returns the number of characters in a character vector.</p>
 <pre class="r"><code>require(quanteda)
+## Warning: package 'quanteda' was built under R version 3.4.4
 s1 &lt;- 'my example text'
 length(s1)
 ## [1] 1
@@ -263,11 +264,8 @@ grep('pears', c('apples', 'oranges', 'pears'))
 <pre class="r"><code>gsub('oranges', 'apples', 'these are oranges')
 ## [1] &quot;these are apples&quot;</code></pre>
 </div>
-<div id="regular-expressions-in-stringi-and-stringr" class="section level3">
-<h3>Regular expressions in <strong>stringi</strong> and <strong>stringr</strong></h3>
-<p>The <a href="http://www.gagolewski.com/software/stringi/"><strong>stringi</strong> package</a> is a large suite of character (“string”) handling functions that are superior in almost every way to the equivalent base R functions. One reason that they are better lies in how they handle Unicode text, which includes character categories and covers all known languages. <strong>stringi</strong> boasts of being “THE R package for fast, correct, consistent, portable, as well as convenient string/text processing in every locale and any native character encoding”. In this case, however, it’s no idle boast. If you are serious about low-level text processing in R, you will want to spend time learning <strong>stringi</strong>. The <strong>quanteda</strong> package relies heavily on its functions.</p>
-<p>A somewhat simpler-to-use package than <strong>stringi</strong> is the <strong>stringr</strong> package. It wraps many of <strong>stringi</strong>’s low level functions in more convenient wrappers, although with fewer options.<br />
-For an overview of the most frequently used functions, see the vignette: <a href="https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html" class="uri">https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html</a>.</p>
+<div id="regular-expressions-in-stringr" class="section level3">
+<h3>Regular expressions in <strong>stringr</strong></h3>
 <div id="matching" class="section level4">
 <h4>Matching</h4>
 <p>Using some <strong>stringr</strong> functions, we can see more about how regular expression pattern matching works. In a regular expression, <code>.</code> means “any character”. So using regular expressions with <strong>stringr</strong>, we have:</p>

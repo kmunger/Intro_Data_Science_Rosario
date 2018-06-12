@@ -128,12 +128,8 @@ The `gsub` command substitutes one pattern for another within a string:
 gsub('oranges', 'apples', 'these are oranges')
 ```
 
-### Regular expressions in **stringi** and **stringr**
+### Regular expressions in  **stringr**
 
-The [**stringi** package](http://www.gagolewski.com/software/stringi/) is a large suite of character ("string") handling functions that are superior in almost every way to the equivalent base R functions.  One reason that they are better lies in how they handle Unicode text, which includes character categories and covers all known languages.  **stringi** boasts of being "THE R package for fast, correct, consistent, portable, as well as convenient string/text processing in every locale and any native character encoding".  In this case, however, it's no idle boast.  If you are serious about low-level text processing in R, you will want to spend time learning **stringi**.  The **quanteda** package relies heavily on its functions.
-
-A somewhat simpler-to-use package than **stringi** is the **stringr** package.  It wraps many of **stringi**'s low level functions in more convenient wrappers, although with fewer options.  
-For an overview of the most frequently used functions, see the vignette: https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html.
 
 #### Matching
 
