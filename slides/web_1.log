@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.11.14)  6 JUN 2018 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.11.14)  14 JUN 2018 13:29
 entering extended mode
 **./web_1.tex
 (web_1.tex
@@ -1185,7 +1185,7 @@ thkerncmss.
 ] [37
 
 ]
-<figures/whattouse.jpg, id=976, 640.3925pt x 360.34625pt>
+<figures/whattouse.jpg, id=975, 640.3925pt x 360.34625pt>
 File: figures/whattouse.jpg Graphic file (type jpg)
 
 <use figures/whattouse.jpg>
@@ -1265,7 +1265,7 @@ Package pdftex.def Info: figures/Venezuela.png used on input line 216.
 \openout4 = `web_1.vrb'.
 
 
-(web_1.vrb <figures/htmlcss.jpg, id=1422, 702.625pt x 590.205pt>
+(web_1.vrb <figures/htmlcss.jpg, id=1420, 702.625pt x 590.205pt>
 File: figures/htmlcss.jpg Graphic file (type jpg)
 
 <use figures/htmlcss.jpg>
@@ -1295,7 +1295,7 @@ Package pdftex.def Info: figures/htmlcss.jpg used on input line 6.
 ] [65
 
 ]
-<figures/apis.png, id=1700, 895.345pt x 437.635pt>
+<figures/apis.png, id=1698, 895.345pt x 437.635pt>
 File: figures/apis.png Graphic file (type png)
  <use figures/apis.png>
 Package pdftex.def Info: figures/apis.png used on input line 332.
@@ -1380,37 +1380,25 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 22953 strings out of 493333
- 469548 string characters out of 3139193
- 564933 words of memory out of 3000000
- 25740 multiletter control sequences out of 15000+200000
+ 22935 strings out of 493333
+ 469329 string characters out of 3139193
+ 564841 words of memory out of 3000000
+ 25726 multiletter control sequences out of 15000+200000
  10014 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,14n,67p,773b,771s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Navigation87} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation91} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation90} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation101} has been referenced but does not exi
-st, replaced by a fixed one
-
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
-s/msam7.pfb>
-Output written on web_1.pdf (86 pages, 1869400 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
+ols/msam7.pfb>
+Output written on web_1.pdf (86 pages, 1876929 bytes).
 PDF statistics:
- 2312 PDF objects out of 2487 (max. 8388607)
- 177 named destinations out of 1000 (max. 500000)
+ 2307 PDF objects out of 2487 (max. 8388607)
+ 173 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,64 @@
+Concepts
+
+Curse of Dimensionality
+
+Distance
+
+Selection Bias
+
+Survivorship bias
+
+Algorithmic bias
+
+Bag of Words
+
+Corpus
+
+Types
+
+Tokens
+
+Stop Words
+
+Document Feature Matrix
+
+Feature
+
+TFIDF Weighting
+
+Euclidean Distance
+
+Cosine Similarity
+
+How to validate unsupervised models
+
+Clustering
+
+K=Means Clustering
+
+Heerarchical clustering
+
+Node
+
+Edge
+
+Adjacency matrix
+
+Degree
+
+K-core Deomposition
+
+HTML
+
+CSS
+
+APIs
+
+Twitter REST APIs
+
+Twitter Streaming API
+
+JSON
+
+
+

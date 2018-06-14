@@ -51,7 +51,7 @@ Collecting tweets filtering by keyword:
 #install.packages("streamR")
 library(streamR)
 load("C:/Users/kevin/Dropbox/credentials/oauth_token27.RData")
-filterStream(file.name="blizzard-tweets.json", track="blizzard", 
+filterStream(file.name="mundial_tweets.json", track="mundial", 
     timeout=30, oauth=my_oauth)
 ```
 
@@ -63,15 +63,15 @@ Note the options:
 
 Once it has finished, we can open it in R as a data frame with the `parseTweets` function
 ```{r}
-tweets <- parseTweets("blizzard-tweets.json")
+tweets <- parseTweets("mundial_tweets.json")
 str(tweets)
 tweets[1,]
 ```
 
 And this is how we would capture tweets mentioning multiple keywords:
 ```{r, eval=FALSE}
-filterStream(file.name="snow-tweets.json", 
-	track=c("blizzard", "snow", "winter storm", "snowfall"),
+filterStream(file.name="futbol_tweets.json", 
+	track=c("mundial", "james rodriguez", "rusia"),
     tweets=50, oauth=my_oauth)
 ```
 
@@ -100,9 +100,9 @@ ht <- unlist(ht)
 head(sort(table(ht), decreasing = TRUE))
 ```
 
-How many tweets mention Justin Bieber?
+How many tweets mention Kanye?
 ```{r}
-length(grep("bieber", tweets$text, ignore.case=TRUE))
+length(grep("kanye", tweets$text, ignore.case=TRUE))
 ```
 
 
@@ -114,11 +114,10 @@ This is how you would extract information from user profiles:
 ```{r}
 library(tweetscores)
 
-reps <- c("RealBenCarson", "tedcruz", "CarlyFiorina", "GrahamBlog", 
-    "GovMikeHuckabee", "GovernorPataki", "RandPaul", "marcorubio", 
+reps <- c("RealBenCarson", "tedcruz", "CarlyFiorina", 
+    "GovMikeHuckabee", "RandPaul", "marcorubio", 
     "RickSantorum", "bobbyjindal", "GovernorPerry", "realDonaldTrump",
-    "JebBush", "GovChristie", "JohnKasich", "ScottWalker", 
-    "gov_gilmore")
+    "JebBush", "GovChristie", "JohnKasich", "ScottWalker")
 dems <- c('HillaryClinton', 'SenSanders', "MartinOMalley",
     "LincolnChafee", "JimWebbUSA")
 candidates <- c(reps, dems)

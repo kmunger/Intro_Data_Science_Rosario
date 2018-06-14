@@ -8,7 +8,7 @@ output: html_document
 
 To understand how APIs work, we'll take the New York Times API as an example. This API allows users to search articles by string and dates, and returns counts of articles and a short description of each article (but not the full text). You can find the documentation [here](http://developer.nytimes.com/docs/read/article_search_api_v2). Get a new API token and paste it below
 
-The fist step is to identify the base url and the parameters that we can use to query the API. Now we can do a first API call using the `httr` package. (You can use my API key for now, let's hope we don't hit the rate limit!)
+The fist step is to identify the base url and the parameters that we can use to query the API. Now we can do a first API call using the `httr` package. 
 
 ```{r}
 apikey <- '9490272d7550435ba8654c33c7846f54'
@@ -58,7 +58,7 @@ json$response$meta
 
 Between these two dates, there were 1,743 articles in the NYT mentioning "inequality".
 
-Now imagine we want to look at the evolution of mentions of this word over time. Following the best coding practices we introduced the first day, we want to write a function that will take a word and a set of dates as arguments and return the counts of articles.
+Now imagine we want to look at the evolution of mentions of this word over time. Following the best coding practices, we want to write a function that will take a word and a set of dates as arguments and return the counts of articles.
 
 This would be a first draft of that function:
 
