@@ -30,7 +30,6 @@ Euclidean Distance
 
 Cosine Similarity
 
-How to validate unsupervised models
 
 Clustering
 
@@ -46,8 +45,6 @@ Adjacency matrix
 
 Degree
 
-K-core Deomposition
-
 HTML
 
 CSS
@@ -60,5 +57,32 @@ Twitter Streaming API
 
 JSON
 
+Choosing K 
 
+
+Dendrogram
+
+API
+
+Rate limit
+
+Data frame
+
+Csv
+
+Feature engineering
+
+Binning
+
+Non-linear transformation
+
+Curse of dimensionality
+
+String
+
+Integer
+
+Factor
+
+Regular expressions
 
